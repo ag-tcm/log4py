@@ -138,7 +138,7 @@ class Logger(object):
 
     @classmethod
     def file_config(cls, file):
-        logging.config.fileConfig(file)
+        logging.config.fileConfig(file, disable_existing_loggers=False)
         cls.not_config = False
 
     @classmethod
